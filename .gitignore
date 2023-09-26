@@ -1,0 +1,17 @@
+**/.DS_Store
+
+# Ignore compiled Python files
+*.pyc
+
+# Ignore virtual environment directories
+/__pycache__/
+pyvenv.cfg
+
+# Ignore binary and generated files
+bin/
+lib/
+
+# Add any other specific files or patterns you want to ignore here
+# For example, you can ignore log files with the following line:
+# *.log
+This .gitignore file will instruct Git to ignore compiled Python files (e.g., *.pyc), virtual environment-related files (/__pycache__/ and pyvenv.cfg), binary files in the bin/ and lib/ directories, and log files if you uncomment the last line and add specific patterns for log files.
