@@ -1,5 +1,7 @@
 import requests
 import speech_recognition
+from gtts import gTTS
+import os
 
 def getresponse(prompt):
     url = "https://chatplm-api.onrender.com/chat"
@@ -20,9 +22,12 @@ with speech_recognition.Microphone() as source:
 
 text = recognizer.recognize_google(audio)
 output = getresponse(text)
+speech = gTTS(text=output, lang='tl', slow=False)
+speech.save("response.mp3")
 
 print("[You]:")
 print(text)
 print()
 print("[ChatPLM]:")
 print(output)
+os.system("afplay response.mp3")
